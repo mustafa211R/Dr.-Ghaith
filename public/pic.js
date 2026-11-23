@@ -13,7 +13,7 @@
  */
 
 window.CLINIC_PIC_CONFIG = {
-    LOGO_URL: "./image_folder/logo.jpeg",
+    LOGO_URL: "/image_folder/logo.jpeg",
   // رابط نشر Google Apps Script (Web App URL) بعد تشغيل دالة setup ونشر السكربت
   APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwutfGPd0Wnp3M-4u0Le-cNBjYL9BL7DG-UhnHa3I9VHAh65F8UmAblUHVzb7AnZXxN/exec",
   // رابط جدول البيانات Google Sheets (اختياري للقراءة المباشرة عبر gviz إذا كان الجدول متاحاً للقراءة)
