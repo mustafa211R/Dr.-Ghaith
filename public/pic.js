@@ -14,9 +14,9 @@
 
 window.CLINIC_PIC_CONFIG = {
   // رابط نشر Google Apps Script (Web App URL) بعد تشغيل دالة setup ونشر السكربت
-  APPS_SCRIPT_URL: "",
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwutfGPd0Wnp3M-4u0Le-cNBjYL9BL7DG-UhnHa3I9VHAh65F8UmAblUHVzb7AnZXxN/exec",
   // رابط جدول البيانات Google Sheets (اختياري للقراءة المباشرة عبر gviz إذا كان الجدول متاحاً للقراءة)
-  SHEET_URL: "",
+  SHEET_URL: "https://docs.google.com/spreadsheets/d/1N-F9xeHPw3rzD678HKFU7qWQ5mVGdRK0xeIMVx4E6m8/edit",
 
   // الصور والأخبار الظاهرة في صفحة العيادة وشريط الأخبار
   gallery: [
