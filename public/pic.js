@@ -13,6 +13,7 @@
  */
 
 window.CLINIC_PIC_CONFIG = {
+    LOGO_URL: "/image_folder/logo.jpg",
   // رابط نشر Google Apps Script (Web App URL) بعد تشغيل دالة setup ونشر السكربت
   APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwutfGPd0Wnp3M-4u0Le-cNBjYL9BL7DG-UhnHa3I9VHAh65F8UmAblUHVzb7AnZXxN/exec",
   // رابط جدول البيانات Google Sheets (اختياري للقراءة المباشرة عبر gviz إذا كان الجدول متاحاً للقراءة)
@@ -46,7 +47,7 @@ window.CLINIC_PIC_CONFIG = {
     },
     {
       id: "pic-4",
-      src: "/image_folder/5.jpeg",
+      src: "/image_folder/5.jpeg.jpeg",
       title: "محاضرة ورم النخاع",
       subtitle: "تقديم محاضرة حول ورم النخاع ",
       tag: "محاضرات",
@@ -55,7 +56,7 @@ window.CLINIC_PIC_CONFIG = {
 
         {
       id: "pic-5",
-      src: "/image_folder/2.jpeg",
+      src: "/image_folder/2.jpeg.jpeg",
       title: "القمة الرابعة",
       subtitle: "امراض الدم",
       tag: "ورشات",
