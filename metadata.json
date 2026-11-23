@@ -1,0 +1,6 @@
+{
+  "name": "عيادة الدكتور غيث التميمي",
+  "description": "الموقع الرسمي لعيادة الدكتور غيث التميمي - دكتوراه في أمراض الدم السريري: الحجز الإلكتروني، متابعة الحجوزات، وتحليل فحص الدم الشامل CBC.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

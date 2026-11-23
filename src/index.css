@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --oxford-blue: #0b1f3a;
+  --oxford-blue-deep: #081729;
+  --oxford-gold: #c9a227;
+  --oxford-gold-dark: #b8911f;
+  --oxford-cream: #f6f3ec;
+  --tx: #1d1d1f;
+  --tx2: #6e6e73;
+  --tx3: #86868b;
+  --line: rgba(11, 31, 58, 0.08);
+  --green: #06762f;
+  --red: #d33333;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Kufi Arabic', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--oxford-cream);
+  color: var(--tx);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 92px;
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.gold-line {
+  height: 3px;
+  width: 130px;
+  background: linear-gradient(90deg, transparent, var(--oxford-gold), transparent);
+}
+
+/* Hide scrollbars for horizontal tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth news marquee ticker (RTL) */
+@keyframes newsScrollRtl {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.ticker-animate {
+  animation: newsScrollRtl 26s linear infinite;
+}
+
+.ticker-wrap:hover .ticker-animate {
+  animation-play-state: paused;
+}
+
+/* TikTok-style center booking button ambient glow */
+@keyframes bookingPulse {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.35), 0 0 0 0 rgba(201, 162, 39, 0.25);
+  }
+  50% {
+    box-shadow: 0 8px 26px rgba(201, 162, 39, 0.5), 0 0 0 6px rgba(201, 162, 39, 0);
+  }
+}
+
+.tiktok-book-btn {
+  animation: bookingPulse 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-animate,
+  .tiktok-book-btn {
+    animation: none !important;
+  }
+}

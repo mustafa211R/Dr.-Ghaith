@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e294b"/>
+      <stop offset="100%" stop-color="#071323"/>
+    </linearGradient>
+    <linearGradient id="gold3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2be4c"/>
+      <stop offset="100%" stop-color="#b8911f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg3)"/>
+  <!-- Queue ticket visual on left -->
+  <g transform="translate(85, 95)">
+    <rect width="275" height="310" rx="26" fill="#ffffff"/>
+    <rect width="275" height="84" rx="26" fill="url(#gold3)"/>
+    <rect y="58" width="275" height="26" fill="url(#gold3)"/>
+    <text x="137" y="48" text-anchor="middle" fill="#0b1f3a" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="20" font-weight="800">بطاقة الحجز الإلكتروني</text>
+    <text x="137" y="156" text-anchor="middle" fill="#0b1f3a" font-family="JetBrains Mono, monospace" font-size="76" font-weight="800">19</text>
+    <text x="137" y="195" text-anchor="middle" fill="#6e6e73" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="15" font-weight="600">رقم الدور في العيادة</text>
+    <line x1="28" y1="224" x2="247" y2="224" stroke="#0b1f3a" stroke-opacity="0.1" stroke-dasharray="6 6" stroke-width="2"/>
+    <text x="137" y="264" text-anchor="middle" fill="#06762f" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="15" font-weight="700">✓ تم تأكيد الموعد بنجاح</text>
+  </g>
+  <!-- Right side Arabic copy -->
+  <g transform="translate(730, 165)" text-anchor="end" font-family="Noto Kufi Arabic, Arial, sans-serif">
+    <text x="0" y="0" fill="#c9a227" font-size="19" font-weight="700">تنظيم المواعيد بكل سهولة</text>
+    <text x="0" y="54" fill="#ffffff" font-size="36" font-weight="800">حجزك بلمسة واحدة</text>
+    <rect x="-180" y="76" width="180" height="3.5" rx="2" fill="url(#gold3)"/>
+    <text x="0" y="122" fill="#e2e8f0" font-size="19">احجز لليوم أو اختر التاريخ المناسب لك</text>
+    <text x="0" y="162" fill="#94a3b8" font-size="16">استعلام فوري عن حجوزات اليوم بالاسم أو رقم الدور</text>
+    <text x="0" y="194" fill="#94a3b8" font-size="16">متابعة خاصة ومباشرة مع الدكتور غيث التميمي</text>
+  </g>
+</svg>

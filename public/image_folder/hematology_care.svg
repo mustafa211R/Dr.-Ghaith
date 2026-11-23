@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6f3ec"/>
+      <stop offset="100%" stop-color="#eae3d2"/>
+    </linearGradient>
+    <linearGradient id="navy2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1f3a"/>
+      <stop offset="100%" stop-color="#193a66"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <!-- Subtle hematology cells pattern -->
+  <g opacity="0.14" fill="#b91c1c">
+    <circle cx="110" cy="110" r="34"/>
+    <circle cx="110" cy="110" r="14" fill="#f6f3ec"/>
+    <circle cx="210" cy="390" r="28"/>
+    <circle cx="210" cy="390" r="11" fill="#f6f3ec"/>
+    <circle cx="690" cy="95" r="24"/>
+    <circle cx="690" cy="95" r="9" fill="#f6f3ec"/>
+  </g>
+  <!-- Lab Report Card Illustration -->
+  <g transform="translate(70, 70)">
+    <rect width="310" height="360" rx="22" fill="#ffffff" stroke="#0b1f3a" stroke-opacity="0.12" stroke-width="2"/>
+    <rect width="310" height="64" rx="22" fill="url(#navy2)"/>
+    <rect y="42" width="310" height="22" fill="url(#navy2)"/>
+    <text x="155" y="40" text-anchor="middle" fill="#c9a227" font-family="JetBrains Mono, monospace" font-size="19" font-weight="700">CBC LAB PANEL</text>
+    <!-- Mock clean lab rows -->
+    <g font-family="JetBrains Mono, monospace" font-size="14" fill="#0b1f3a">
+      <text x="26" y="108" font-weight="700">WBC</text>
+      <text x="175" y="108" fill="#06762f" font-weight="700">6.8</text>
+      <text x="284" y="108" text-anchor="end" fill="#6e6e73" font-size="12">4.0-10.5</text>
+      <line x1="26" y1="124" x2="284" y2="124" stroke="#0b1f3a" stroke-opacity="0.08"/>
+
+      <text x="26" y="156" font-weight="700">RBC</text>
+      <text x="175" y="156" fill="#06762f" font-weight="700">4.65</text>
+      <text x="284" y="156" text-anchor="end" fill="#6e6e73" font-size="12">3.50-5.50</text>
+      <line x1="26" y1="172" x2="284" y2="172" stroke="#0b1f3a" stroke-opacity="0.08"/>
+
+      <text x="26" y="204" font-weight="700">HGB</text>
+      <text x="175" y="204" fill="#0b1f3a" font-weight="700">13.4</text>
+      <text x="284" y="204" text-anchor="end" fill="#6e6e73" font-size="12">11.0-15.0</text>
+      <line x1="26" y1="220" x2="284" y2="220" stroke="#0b1f3a" stroke-opacity="0.08"/>
+
+      <text x="26" y="252" font-weight="700">MCV</text>
+      <text x="175" y="252" fill="#0b1f3a" font-weight="700">86.2</text>
+      <text x="284" y="252" text-anchor="end" fill="#6e6e73" font-size="12">78.0-99.0</text>
+      <line x1="26" y1="268" x2="284" y2="268" stroke="#0b1f3a" stroke-opacity="0.08"/>
+
+      <text x="26" y="300" font-weight="700">PLT</text>
+      <text x="175" y="300" fill="#06762f" font-weight="700">270</text>
+      <text x="284" y="300" text-anchor="end" fill="#6e6e73" font-size="12">150-450</text>
+    </g>
+    <rect x="26" y="318" width="258" height="24" rx="12" fill="#06762f" fill-opacity="0.1"/>
+    <text x="155" y="335" text-anchor="middle" fill="#06762f" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="12" font-weight="700">جميع المؤشرات ضمن المدى الطبيعي</text>
+  </g>
+  <!-- Right side Arabic title -->
+  <g transform="translate(740, 175)" text-anchor="end" font-family="Noto Kufi Arabic, Arial, sans-serif">
+    <text x="0" y="0" fill="#b8911f" font-size="19" font-weight="700">حاسبة ومفسّر فحوصات الدم</text>
+    <text x="0" y="54" fill="#0b1f3a" font-size="36" font-weight="800">قراءة تحليل CBC</text>
+    <rect x="-180" y="76" width="180" height="3.5" rx="2" fill="#c9a227"/>
+    <text x="0" y="118" fill="#1d1d1f" font-size="20" font-weight="600">تفسير فوري باللغة العربية</text>
+    <text x="0" y="158" fill="#6e6e73" font-size="16">فحص فردي أو كامل لنسب الدم، الحديد،</text>
+    <text x="0" y="186" fill="#6e6e73" font-size="16">فيتامين B12، والصفائح الدموية</text>
+  </g>
+</svg>
