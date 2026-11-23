@@ -20,6 +20,7 @@ import { VisitsView } from './components/VisitsView';
 import {
   CLINIC_INFO,
   fetchClinicState,
+  getLogoUrl,
   getTodayDateStr,
   recordClinicVisit,
 } from './services/clinicApi';
@@ -28,6 +29,8 @@ import { Booking, BottomView, TopTab, VisitStats } from './types/clinic';
 export default function App() {
   const [activeTopTab, setActiveTopTab] = useState<TopTab>('clinic');
   const [bottomView, setBottomView] = useState<BottomView>(null);
+  const [logoFailed, setLogoFailed] = useState(false);
+  const logoUrl = getLogoUrl();
 
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [visits, setVisits] = useState<VisitStats>({
@@ -161,11 +164,22 @@ export default function App() {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="w-20 h-20 rounded-full bg-white p-1.5 border-2 border-[#c9a227] shadow-[0_8px_28px_rgba(0,0,0,0.4)] mb-3 flex items-center justify-center"
+            className="w-20 h-20 rounded-full bg-white p-1 border-2 border-[#c9a227] shadow-[0_8px_28px_rgba(0,0,0,0.4)] mb-3 flex items-center justify-center overflow-hidden"
           >
-            <div className="w-full h-full rounded-full bg-[#0b1f3a] flex items-center justify-center text-[#c9a227]">
-              <Stethoscope className="w-9 h-9" />
-            </div>
+            {logoUrl && !logoFailed ? (
+              <img
+                key={logoUrl}
+                src={logoUrl}
+                alt={`شعار عيادة ${CLINIC_INFO.doctorName}`}
+                referrerPolicy="no-referrer"
+                onError={() => setLogoFailed(true)}
+                className="w-full h-full rounded-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full rounded-full bg-[#0b1f3a] flex items-center justify-center text-[#c9a227]">
+                <Stethoscope className="w-9 h-9" />
+              </div>
+            )}
           </motion.div>
 
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
@@ -244,10 +258,7 @@ export default function App() {
                 onBookWithSummary={(summary) => handleOpenBookingModal(summary)}
               />
             ) : (
-              <AboutView
-                onConfigSaved={() => loadData(true)}
-                onShowToast={showToast}
-              />
+              <AboutView />
             )}
           </motion.div>
         </AnimatePresence>
