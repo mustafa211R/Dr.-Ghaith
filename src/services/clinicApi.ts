@@ -3,6 +3,7 @@ import { Booking, GalleryItem, VisitStats } from '../types/clinic';
 declare global {
   interface Window {
     CLINIC_PIC_CONFIG?: {
+      LOGO_URL?: string;
       APPS_SCRIPT_URL?: string;
       SHEET_URL?: string;
       gallery?: GalleryItem[];
@@ -53,15 +54,32 @@ export function formatArabicDate(dateStr: string): string {
   });
 }
 
+export function resolveAssetUrl(path: string): string {
+  const clean = (path || '').trim();
+  if (!clean) return '';
+  if (/^(https?:|data:|blob:)/i.test(clean)) return clean;
+  // تحويل المسار الجذري /image_folder/... إلى مسار نسبي ./image_folder/... ليعمل على GitHub Pages (مثل /Dr.-Ghaith/)
+  if (clean.startsWith('/')) return `.${clean}`;
+  if (clean.startsWith('./') || clean.startsWith('../')) return clean;
+  return `./${clean}`;
+}
+
+export function getLogoUrl(): string {
+  return resolveAssetUrl(window.CLINIC_PIC_CONFIG?.LOGO_URL || '');
+}
+
 export function getGalleryItems(): GalleryItem[] {
   const cfg = window.CLINIC_PIC_CONFIG;
   if (cfg && Array.isArray(cfg.gallery) && cfg.gallery.length > 0) {
-    return cfg.gallery;
+    return cfg.gallery.map((item) => ({
+      ...item,
+      src: resolveAssetUrl(item.src),
+    }));
   }
   return [
     {
       id: 'pic-1',
-      src: '/image_folder/doctor_clinic.svg',
+      src: './image_folder/doctor_clinic.svg',
       title: 'دكتور غيث التميمي — عيادة أمراض الدم السريري',
       subtitle: 'دكتوراه في أمراض الدم السريري · استشارات وتشخيص دقيق',
       tag: 'العيادة والموقع',
@@ -69,7 +87,7 @@ export function getGalleryItems(): GalleryItem[] {
     },
     {
       id: 'pic-2',
-      src: '/image_folder/hematology_care.svg',
+      src: './image_folder/hematology_care.svg',
       title: 'تشخيص ومتابعة أمراض الدم وتحليل CBC',
       subtitle: 'قراءة دقيقة لنسب كريات الدم والهيموغلوبين والصفائح',
       tag: 'المختبر السريري',
@@ -77,7 +95,7 @@ export function getGalleryItems(): GalleryItem[] {
     },
     {
       id: 'pic-3',
-      src: '/image_folder/clinic_hours.svg',
+      src: './image_folder/clinic_hours.svg',
       title: 'خدمة الحجز الإلكتروني السريع للمراجعين',
       subtitle: 'احجز دورك لليوم أو لأي موعد قادم واحصل على رقمك فوراً',
       tag: 'المواعيد',
